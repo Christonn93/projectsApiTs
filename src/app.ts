@@ -1,9 +1,9 @@
 import express from 'express';
 
-import storeRoutes from '@store/routes/store.routes';
-import bookingRoutes from '@booking/routes/booking.routes';
-import forumRoutes from '@forum/routes/forum.routes';
-import todoRoutes from '@todo/routes/todo.routes';
+import storeRoutes from './store/routes/store.routes';
+import bookingRoutes from './booking/routes/booking.routes';
+import forumRoutes from './forum/routes/forum.routes';
+import todoRoutes from './todo/routes/todo.routes';
 
 const app = express();
 
