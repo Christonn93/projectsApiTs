@@ -1,7 +1,8 @@
 import express from "express";
-import { getAllProducts, addProduct, updateProduct, deleteProduct } from "@store/controllers/products.controller";
-import { getSellerInfo, getBuyerInfo, getManagementInfo } from "@store/controllers/users.controller";
-import { getContactInfo } from "@store/controllers/about.controller";
+import { getAllProducts, addProduct, updateProduct, deleteProduct } from "../controllers/products.controller";
+import { getSellerInfo, getBuyerInfo, getManagementInfo } from "../controllers/users.controller";
+import { getAboutInfo } from "../controllers/about.controller";
+import { getContactInfo }from '../controllers/contact.controller'
 
 const router = express.Router();
 
@@ -17,6 +18,7 @@ router.get("/user/buyer", getBuyerInfo);
 router.get("/user/management", getManagementInfo);
 
 // About routes
+router.use('/about', getAboutInfo); 
 router.get("/about/contact", getContactInfo);
 
 export default router;

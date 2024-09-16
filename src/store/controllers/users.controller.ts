@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
-import UserModel from "@store/models/user.model";
+import UserModel from "../models/user.model";
 
 // Get seller information
 export const getSellerInfo = async (req: Request, res: Response) => {
+ console.log(req.query);
  try {
   const sellers = await UserModel.find({ role: "seller" });
   res.json(sellers);
@@ -17,6 +18,7 @@ export const getSellerInfo = async (req: Request, res: Response) => {
 
 // Get buyer information
 export const getBuyerInfo = async (req: Request, res: Response) => {
+ console.log(req.query);
  try {
   const buyers = await UserModel.find({ role: "buyer" });
   res.json(buyers);
@@ -31,6 +33,7 @@ export const getBuyerInfo = async (req: Request, res: Response) => {
 
 // Get management information
 export const getManagementInfo = async (req: Request, res: Response) => {
+ console.log(req.query);
  try {
   const management = await UserModel.find({ role: "management" });
   res.json(management);

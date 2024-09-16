@@ -1,12 +1,15 @@
 import { Request, Response } from 'express';
 
-// Contact information example
-const contactInfo = {
-  email: 'contact@store.com',
-  phone: '123-456-7890'
+// About information example
+const aboutInfo = {
+  description: 'This is a sample application to demonstrate an Express and TypeScript setup.',
+  version: '1.0.0',
+  author: 'Your Name',
+  contact: 'contact@store.com'
 };
 
-// Get contact information
-export const getContactInfo = (req: Request, res: Response) => {
-  res.json(contactInfo);
+// Get about information
+export const getAboutInfo = (req: Request, res: Response) => {
+  console.log(req.query);
+  res.json(aboutInfo);
 };
