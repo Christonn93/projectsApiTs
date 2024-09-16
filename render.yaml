@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: my-api # Name of your service
+    env: node
+    buildCommand: npm run build # Command to build your TypeScript code
+    startCommand: npm start # Command to start your application
+    plan: free # Render plan (free or paid)
+    region: oregon # Choose the closest region for deployment
+    branch: main # The branch to deploy from (default is 'main')
+
+    # Optional: add a custom domain
+    # domains:
+    #   - example.com
+
+    # Optional: additional configuration for health checks or custom settings
+    # healthCheckPath: /health
+    # healthCheckInterval: 30s

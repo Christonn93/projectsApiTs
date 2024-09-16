@@ -1,8 +1,10 @@
 import express from 'express';
-import storeRoutes from './store/routes/store.routes';
-import bookingRoutes from './booking/routes/booking.routes';
-import forumRoutes from './forum/routes/forum.routes';
-import todoRoutes from './todo/routes/todo.routes';
+import { Pool } from 'pg';
+
+import storeRoutes from '@store/routes/store.routes';
+import bookingRoutes from '@booking/routes/booking.routes';
+import forumRoutes from '@forum/routes/forum.routes';
+import todoRoutes from '@todo/routes/todo.routes';
 
 const app = express();
 
@@ -16,7 +18,12 @@ app.use('/v1/forum', forumRoutes);
 app.use('/v1/todo', todoRoutes);
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const port = process.env.PORT || 3000;
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });

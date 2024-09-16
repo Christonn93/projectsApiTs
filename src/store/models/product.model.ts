@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
-import { Product } from "../types";
+import { Product } from "@store/types";
 
 interface ProductDocument extends Product, Document {}
 

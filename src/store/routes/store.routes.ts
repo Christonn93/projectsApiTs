@@ -1,7 +1,7 @@
 import express from "express";
-import { getAllProducts, addProduct, updateProduct, deleteProduct } from "../controllers/products.controller";
-import { getSellerInfo, getBuyerInfo, getManagementInfo } from "../controllers/users.controller";
-import { getContactInfo } from "../controllers/about.controller";
+import { getAllProducts, addProduct, updateProduct, deleteProduct } from "@store/controllers/products.controller";
+import { getSellerInfo, getBuyerInfo, getManagementInfo } from "@store/controllers/users.controller";
+import { getContactInfo } from "@store/controllers/about.controller";
 
 const router = express.Router();
 

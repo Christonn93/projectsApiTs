@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import UserModel from "../models/user.model";
+import UserModel from "@store/models/user.model";
 
 // Get seller information
 export const getSellerInfo = async (req: Request, res: Response) => {
