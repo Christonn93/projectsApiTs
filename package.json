@@ -5,7 +5,8 @@
  "scripts": {
   "start": "node dist/app.js",
   "build": "tsc",
-  "dev": "ts-node-dev src/index.ts"
+  "dev": "ts-node-dev src/index.ts",
+  "postbuild": "ls -la dist"
  },
  "keywords": [],
  "author": "",

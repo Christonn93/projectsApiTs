@@ -11,13 +11,6 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@store/*": ["store/*"],
-      "@booking/*": ["booking/*"],
-      "@forum/*": ["forum/*"],
-      "@todo/*": ["todo/*"]
-    },
     "typeRoots": ["./node_modules/@types"],
     "types": ["node", "pg"]
   },
